@@ -5,8 +5,7 @@ with open("inputs/day02.txt") as file:
 
 def run(memory, noun, verb):
     pointer = 0
-    memory[1] = noun
-    memory[2] = verb
+    memory[1], memory[2] = noun, verb
 
     while True:
         opcode = memory[pointer]
@@ -20,9 +19,6 @@ def run(memory, noun, verb):
 
         elif opcode == 99:
             break
-
-        else:
-            print("bad")
 
         pointer += 4
 
